@@ -74,8 +74,3 @@ console.log("myArray after pop",myArray);
 console.log("myArray length",myArray.length);
 console.log("cars length",cars.length);
 console.log("stringArray length",stringArray.length);
-
-
-
-
-
