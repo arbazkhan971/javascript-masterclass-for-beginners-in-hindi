@@ -69,5 +69,4 @@ console.log("phsyics marks", student.marks.physics);
 console.log("maths marks", student.marks.maths);
 
 // JavaScript Object Methods
-
 console.log("full name function", student.fullName());
