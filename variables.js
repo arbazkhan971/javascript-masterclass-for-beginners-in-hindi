@@ -1,3 +1,8 @@
+// what is variables in javascript
+// var, let, const
+// functional scope vs block scope
+
+
 // var a = 100;
 // console.log("a = " + a);
 // a = a+10;
