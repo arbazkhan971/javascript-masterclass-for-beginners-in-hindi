@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template string</title>
+    <script>
+        // case 1
+        var message = "Hello, my 'name' is A";
+        var message1 = 'Hello, my \'name\' is A1';
+        var message2 = `Hello, my "name" is A2`;
+        console.log(message);
+        console.log(message1);
+        console.log(message2);
+
+        // case 2
+        var message3 = "Hello,\nmy name is A3 \ni am on another line";
+        console.log(message3);
+        var message4 = `Hello,
+        my name is A3 
+        i am on another line
+        `;
+        console.log(message4);
+        // case 3
+        var name = "A";
+        var name2 = "B";
+        var name3 = 20;
+        var message5 = "Hello "+ name2 +", my name is " + name + " and i am " + name3 + " years old";
+        console.log(message5);
+        var message6 = `Hello ${name2}, my name is ${name} and i am ${name3} years old`;
+        console.log(message6);
+        var radius = 5;
+        console.log(`The area of a circle with radius ${radius} is ${Math.PI * radius * radius}`)
+        // area of rectangle
+        var length = 10;
+        var width = 20;
+        console.log(`The area of a rectangle with length ${length} and width ${width} is ${length * width}`)
+        // square root
+        var number = 16;
+        console.log(`The square root of ${number} is ${Math.sqrt(number)}`)
+    </script>
+</head>
+<body>
+    <p>
+        template string
+    </p>
+</body>
+</html>

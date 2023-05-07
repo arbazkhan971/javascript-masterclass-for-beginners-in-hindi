@@ -91,5 +91,5 @@ function blockf1(){
     console.log("b = " + b); // isski value kitni hogi
 }
 blockf1();
-console.log("d = " + d);
+console.log("d = " + d); // d ka value kitna hoga
 console.log("a = " + a);
