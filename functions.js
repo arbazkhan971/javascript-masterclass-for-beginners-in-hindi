@@ -13,9 +13,9 @@
 // Declaring a Function
 // The syntax to declare a function is:
 
-// function nameOfFunction () {
-//     // function body   
-// }
+function nameOfFunction () {
+    // function body   
+}
 
 // nameOfFunction();
 
