@@ -50,8 +50,3 @@ for (let i of cars) {
     console.log(i);
 }
 
-// console.log("For each loop")
-// cars.forEach(element => {
-//     console.log(element);
-// }   );
-
