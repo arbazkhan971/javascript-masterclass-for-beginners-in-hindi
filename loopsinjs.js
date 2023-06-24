@@ -41,20 +41,14 @@ do {
     i1++;
 }
 while (i1 < cars.length);
-
-
-console.log("For in loop")
 for( let i in cars){
     console.log(i)
     console.log(cars[i])
 }
-
 console.log("For of loop")
 for (let i of cars) {
     console.log(i);
 }
-
-
 
 // console.log("For each loop")
 // cars.forEach(element => {
