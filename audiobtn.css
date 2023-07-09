@@ -13,23 +13,19 @@ body {
 }
 
 .buttons {
-    margin: 20px;
-    background-color: antiquewhite;
+    margin: 30px;
 }
 
-button{
+button {
     border: none;
     padding: 10px 20px;
     font-size: 18px;
     border-radius: 15px;
     background-color: aliceblue;
     cursor: pointer;
+    font-weight: bold;
 }
 
-button:hover{
+button:hover {
     background-color: rgba(0, 0, 0, 0.1);
-}
-
-button:focus{
-    outline: none;
 }
