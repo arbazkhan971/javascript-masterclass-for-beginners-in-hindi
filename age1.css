@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+.age-container {
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 10px 0 black;
+    height: 250px;
+}
+
+.age-header {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+label{
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.age-dob-input {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.age-button {
+    width: 200px;
+    color: white;
+    background-color: black;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    margin-bottom: 10px;
+}

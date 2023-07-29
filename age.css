@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+.container {
+    width: 500px;
+    height: 250px;
+    border-radius: 15px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 0 10px 0 black;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+label {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: block;
+}
+
+.date-input {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+.dob-btn {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.age {
+    font-weight: bold;
+    color: red;
+}
