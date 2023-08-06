@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="password.css">
+</head>
+<body>
+    <div class="container">
+
+        <h2>
+            Password Generator
+        </h2>
+
+        <div class="generator">
+
+            <div class="input">
+                <input type="text" class="output" placeholder="Your Password" disabled>
+                <button class="copy">
+                    Copy
+                </button>
+            </div>
+
+            <div class="row">
+                <div class="setting">
+                    <label for="" class="length">
+                        length of the password
+                    </label>
+                    <input type="number" class="length-input" value="10" min="5" max="20">
+                </div>
+                <div class="setting">
+                    <label for="" class="uppercase">
+                        Include Uppercase
+                    </label>
+                    <input type="checkbox" class="uppercase-input" checked>
+                </div>
+                <div class="setting">
+                    <label for="" class="lowercase">
+                        Include Lowercase
+                    </label>
+                    <input type="checkbox" class="lowercase-input" checked>
+                </div>
+                <div class="setting">
+                    <label for="" class="numbers">
+                        Include Numbers
+                    </label>
+                    <input type="checkbox" class="numbers-input" checked>
+                </div>
+                <div class="setting">
+                    <label for="" class="symbols">
+                        Include Symbols
+                    </label>
+                    <input type="checkbox" class="symbols-input" checked>
+                </div>
+                <button class="generate">
+                    Generate
+                </button>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <script src="password.js"></script>
+</body>
+</html>
