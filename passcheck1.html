@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Chekcker</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        input {
+            padding: 10px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="password" placeholder="Enter ur password">
+        <div class="output">
+            <span id="output"></span>
+        </div>
+    </div>
+
+    <script>
+
+        const password = document.querySelector('#password');
+        const output = document.querySelector('#output');
+        const numbers = "0123456789";
+        const alphabets = "abcdefghijklmnopqrstuvwxyz";
+        const special = "!@#$%^&*()_+";
+        const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        password.addEventListener('input', () => {
+            const pass = password.value;
+            if(pass === ""){
+                output.innerHTML = '';
+            }
+            else if (pass.length < 8) {
+                output.innerHTML = 'Password must be at least 8 characters';
+            }else if(pass.length > 8){
+                if( pass.includes(numbers) && pass.includes(alphabets) && pass.includes(special) && pass.includes(upper) ){
+                    output.innerHTML = 'Strong Password';
+                }else if( pass.includes(numbers) && pass.includes(alphabets) && pass.includes(special) ){
+                    output.innerHTML = 'Medium Password';
+                }else if( pass.includes(numbers) && pass.includes(alphabets) ){
+                    output.innerHTML = 'Weak Password';
+                }else if( pass.includes(numbers) && pass.includes(special) ){
+                    output.innerHTML = 'Weak Password';
+                }else if( pass.includes(alphabets) && pass.includes(special) ){
+                    output.innerHTML = 'Weak Password';
+                }else if( pass.includes(numbers) ){
+                    output.innerHTML = 'Very Weak Password';
+                }else {
+                    output.innerHTML = 'Very Very Weak Password';
+                }
+            }
+            else {
+                output.innerHTML = '';
+            }
+        });
+
+    </script>
+
+</body>
+</html>
+
