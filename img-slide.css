@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    height: 300px;
+    width: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+}
+
+.btn {
+    position: absolute;
+    color: white;
+    opacity: 0.7;
+    font-size: 50px;
+    top: 48%;
+}
+
+.img-slide {
+    display: flex;
+}
+
+.prev {
+    right: 60%;
+}
+
+.next {
+    left: 60%;
+}

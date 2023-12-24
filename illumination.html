@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jumping Letter Animation</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #222;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+    }
+
+    .jumping-text {
+      font-size: 3em;
+      display: inline-block;
+    }
+
+    .letter {
+      display: inline-block;
+      transform-origin: center bottom;
+      transition: transform 0.3s ease;
+      margin-right: 5px; /* Adjust the spacing between letters */
+    }
+
+    .jump {
+      transform: translateY(-20px) translateX(20px);
+    }
+  </style>
+</head>
+<body>
+  <div class="jumping-text" onmouseover="jumpLetters(this)" onmouseout="resetLetters(this)">
+    <span class="letter">J</span>
+    <span class="letter">u</span>
+    <span class="letter">m</span>
+    <span class="letter">p</span>
+    <span class="letter">i</span>
+    <span class="letter">n</span>
+    <span class="letter">g</span>
+  </div>
+
+  <script>
+    function jumpLetters(container) {
+      const letters = container.querySelectorAll('.letter');
+      letters.forEach(letter => {
+        letter.classList.add('jump');
+      });
+    }
+
+    function resetLetters(container) {
+      const letters = container.querySelectorAll('.letter');
+      letters.forEach(letter => {
+        letter.classList.remove('jump');
+      });
+    }
+  </script>
+</body>
+</html>

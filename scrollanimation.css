@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    color: black;
+    font-size: 2rem;
+    cursor: none;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0; /* Change right to left to keep it on the left side */
+    height: 50px; /* Swap width and height for a horizontal indicator */
+    width: 100%;
+    /* background-color: #4CAF50; Initial color of the indicator */
+    transition: background-color 0.3s, opacity 0.3s; /* Add transition for smooth animation */
+}
