@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoverboard</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1d1d1d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .square {
+            width: 16px;
+            height: 16px;
+            background-color: #1d1d1d;
+            box-shadow: 0 0 2px #fff;
+            transition: 0.5s ease;
+            margin: 2px;
+        }
+
+        .square:hover {
+            transition-duration: 0s;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container" id="container">
+    </div>
+    <script>
+
+        const squares = document.querySelectorAll('.square');
+        const container = document.getElementById('container');
+        let sqaure = 500;
+        let colors = ["red","yellow","orange","violet","blue"]
+        for(let i = 0;i<sqaure;i++){
+            const squared= document.createElement('div');
+            squared.classList.add('square');
+            squared.addEventListener('mouseover',()=>{
+                setColorToEl(squared);
+            })
+            squared.addEventListener('mouseout',()=>{
+                removeColorFromEl(squared);
+            })
+            container.appendChild(squared);
+        }
+
+        function setColorToEl(element){
+            const color = getRandomColor();
+            element.style.background = color;
+            element.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`;
+        }
+
+        function removeColorFromEl(element){
+            element.style.background = '#1d1d1d';
+            element.style.boxShadow = `0 0 2px #fff`;
+        }
+
+        function getRandomColor(){
+            return colors[Math.floor(Math.random()*colors.length)];
+        }
+    </script>
+    
+</body>
+</html>
