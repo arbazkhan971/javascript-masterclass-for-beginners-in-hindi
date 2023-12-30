@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: lightblue;
+
+    }
+    .container {
+        text-align: center;
+        width: 600px;
+        height: 300px;
+        background-color: purple;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    img {
+        margin-top: -70px;
+        margin-bottom: 40px;
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+        background-repeat: no-repeat;
+    }
+    .testimonials {
+        font-size: 1.5rem;
+        color: white;
+        margin-bottom: 40px;
+    }
+    .author {
+        font-size: 1.2rem;
+        color: white;
+    }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="img">
+            <img src="https://source.unsplash.com/random/150×150/?face" alt="Profile Image">
+        </div>
+        <div class="testimonials">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+            </p>
+        </div>
+        <div class="author">
+            <p>
+                Mike Smith
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const container = document.querySelector('.container');
+        const testimonials = document.querySelector('.testimonials');
+        const author = document.querySelector('.author');
+        const img = document.querySelector('.img');
+        const names = ['Mike Smith', 'John Doe', 'Jane Doe', 'Jane Powell', 'John Smith'];
+        const testimonialsText = [
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+        ];
+        const images = [
+            'https://source.unsplash.com/random/150×150/?face',
+            'https://source.unsplash.com/random/150×150/?white face',
+            'https://source.unsplash.com/random/150×150/?black face',
+            'https://source.unsplash.com/random/150×150/?robot face',
+            'https://source.unsplash.com/random/150×150/?random face']
+        let count = 0;
+        function changeTestimonial() {
+            testimonials.innerHTML = testimonialsText[count];
+            author.innerHTML = names[count];
+            img.innerHTML = `<img src="${images[count]}" alt="Profile Image">`;
+            count++;
+            if(count > testimonialsText.length - 1) {
+                count = 0;
+            }
+        }
+        setInterval(changeTestimonial, 5000);
+    </script>
+
+</body>
+</html>
