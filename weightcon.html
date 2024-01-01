@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Converter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            width: 400px;
+            background-color: white;
+        }
+        .header {
+            background-color: blue;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+            color: white;
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        input {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+            width: 90%;           
+        }
+        .output {
+            margin-bottom: 10px;
+        }
+        #output {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>
+                Weight Converter
+            </h1>
+        </div>
+        <div class="input">
+            <label for="input" >Weights in KG</label>
+            <input type="text" id="input" placeholder="Enter weight in KG...">
+        </div>
+        <div class="output">
+           Your weights in Pounds<p id="output">0</p>
+        </div>
+    </div>
+
+    <script>
+        const input = document.getElementById('input');
+        const output = document.getElementById('output');
+
+        input.addEventListener('input', () => {
+            const kg = input.value;
+            const pounds = kg * 2.20462;
+            output.innerText = pounds.toFixed(2);
+        });
+    </script>
+
+</body>
+</html>

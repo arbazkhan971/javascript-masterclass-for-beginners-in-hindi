@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #app {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #results {
+            max-width: 600px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .movie {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .movie img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Movie App</h1>
+        <input type="text" id="searchInput" placeholder="Enter movie title...">
+        <button onclick="searchMovies()">Search</button>
+        <div id="results"></div>
+    </div>
+    <script>
+        function searchMovies() {
+            const apiKey = 'ed4cb15b'; // Replace with your OMDb API key
+            const searchInput = document.getElementById('searchInput').value;
+
+            if (searchInput.trim() === '') {
+                alert('Please enter a movie title to search.');
+                return;
+            }
+
+            const apiUrl = `https://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(searchInput)}`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => displayResults(data.Search))
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        function displayResults(movies) {
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = '';
+
+            if (!movies || movies.length === 0) {
+                resultsContainer.innerHTML = '<p>No movies found.</p>';
+                return;
+            }
+
+            movies.forEach(movie => {
+                const movieDiv = document.createElement('div');
+                movieDiv.className = 'movie';
+
+                const title = document.createElement('h3');
+                title.textContent = movie.Title;
+
+                const year = document.createElement('p');
+                year.textContent = `Year: ${movie.Year}`;
+
+                const poster = document.createElement('img');
+                poster.src = movie.Poster === 'N/A' ? 'https://via.placeholder.com/150' : movie.Poster;
+                poster.alt = `${movie.Title} Poster`;
+
+                movieDiv.appendChild(title);
+                movieDiv.appendChild(year);
+                movieDiv.appendChild(poster);
+
+                resultsContainer.appendChild(movieDiv);
+            });
+        }
+    </script>
+</body>
+</html>
+
+
+
+- [ ] Temperature Convertor
+- [ ] Tic Tac Toe
+- [ ] Weight Converter
+- [ ] Todo app
+- [ ] Rock paper scissor
+- [x] Vowel Counter
+- [x] Multiplication App
+- [x] Scrollbar Animation
+- [x] Mini Calendar
+- [x] Captcha Generator
+- [x] Sticky Navbar
+- [x] Image Carousel
+- [x] Hoverboard
+- [x] Github Contribution
+- [x] Testimonial Project
+- [x] Drag and Drop App
+- [x] Animated loading bar
+- [x] Image Slider
+- [x] Image gallery
+- [x] Image search app
+- [x] Background Colour Change
+- [x] Dictionary App
+- [x] Chracter counter
+- [x] Quote Random Generator
+- [x] Dad Joke Generator
+- [x] Random Emoji generator
+- [x] Text animation
+- [x] Mouse Event
+- [x] Password strength Checker
+- [x] New year counter
+- [x] Pomodoro Counter
+- [x] BMI calculator
