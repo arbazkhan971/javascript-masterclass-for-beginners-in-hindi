@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumping letter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .letters {
+            cursor: pointer;
+        }
+
+        .letters span {
+            display: inline-block;
+            font-size: 10rem;
+            font-weight: bold;
+            line-height: 0.8;
+            color: blue;
+        }
+        span.active {
+            animation: jump 1.5s ease-in-out;
+        }
+
+        @keyframes jump {
+            0% {
+                transform: translate(0,0) rotate(180deg);
+            }
+            100% {
+                transform: scale(2) translate(0,-150px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="letters">
+        <span>
+            P
+        </span>
+        <span>
+            R
+        </span>
+        <span>
+            O
+        </span>
+        <span>
+            C
+        </span>
+        <span>
+            O
+        </span>
+        <span>
+            D
+        </span>
+        <span>
+            E
+        </span>
+    </div>
+    <script>
+        const letters = document.querySelectorAll('span');
+        letters.forEach((letter, idx) => {
+            letter.addEventListener('click', () => {
+                setTimeout(() => {
+                    letter.classList.add('active');
+                }, idx * 50);
+                setTimeout(() => {
+                    letter.classList.remove('active');
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
